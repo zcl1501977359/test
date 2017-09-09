@@ -1,0 +1,28 @@
+
+
+
+通过好压，工具箱，通过MD5进行校验，判断文件是否缺失。
+
+
+
+git命令行上传文件：
+1.现在云端建立建立文件夹，并在本地建立对应的文件件。
+2.通过git bush进入命令行
+3.$ git init.生成git文件
+4.$ git remote add <origin>  <https://github.com/zcl1501977359/web.git>
+5.$ git fetch origin 提取文件
+6.$ git merge origin/<master>(第一次上传时，不需要，因为云端没有该文件，不需要对比文件是否有差异)
+7.$ git add -A 增加到缓存
+8.$  git commit -m 't' 提交一个叫t（自己命名）的版本
+9.$ git push <origin> <master >
+9.输入邮箱账号，密码
+
+
+
+返回版本控制:
+$git reset --hard(返回本地的以前版本)》如果防止文件被还原，要记住$git reflog 指针游离的id进行还原
+$ git reflog
+a566e0f (HEAD -> master) HEAD@{0}: reset: moving to a566e0f
+029d371 (origin/master) HEAD@{1}: commit: 增加备注
+a566e0f (HEAD -> master) HEAD@{2}: commit (initial): t
+或者通过$ git reset --hard HEAD@{1}进行相应的还原
